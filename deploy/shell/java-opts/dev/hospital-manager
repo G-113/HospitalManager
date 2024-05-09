@@ -1,0 +1,1 @@
+-Xmx1024m -Xms1024m -Xdebug -Xrunjdwp:server=y,transport=dt_socket,suspend=n,address=40005  -Dspring.profiles.active=dev

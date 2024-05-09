@@ -1,0 +1,1 @@
+-Xmx3G -Xms3G -Dspring.profiles.active=test

@@ -1,0 +1,39 @@
+server:
+  port: 9281
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hospital_manager?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  mail:
+    username: 373675032@qq.com
+    password:
+    host: smtp.qq.com
+    port: 465
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          socketFactory:
+            port: 465
+            class: javax.net.ssl.SSLSocketFactory
+            fallback: false
+    valid: 5
+    title: "智慧医疗管理系统 - 挂号信息"
+    template: "您的挂号信息为：<strong style='color: red'>%s</strong>，%d，若非本人操作，请勿泄露。"
+
+# 阿里云通义千问配置
+ai-key: sk-0ea074b7bc944faca0483ebfe104bae4
+
+mybatis-plus:
+  mapper-locations: classpath*:mybatis/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
